@@ -5,37 +5,43 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Rosary Atelier — Pray the Rosary Daily</title>
 <meta name="description" content="Rosary Atelier is a quiet, beautiful place to pray the Rosary: the day's Gospel, guided Mysteries, and sacred artwork, made by a Catholic family.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
 <style>
   :root{
     --navy:#0D274A; --navy-deep:#071B36; --gold:#CDAA63; --gold-light:#F3D48C;
     --sky:#B9D2E4; --sky-pale:#EAF2F8; --ink:#22344D; --paper:#FBF9F4;
   }
   *{margin:0;padding:0;box-sizing:border-box}
-  body{font-family:Georgia,'Times New Roman',serif;color:var(--ink);background:var(--paper);line-height:1.65}
+  body{font-family:'Crimson Pro',Georgia,'Times New Roman',serif;color:var(--ink);background:var(--paper);line-height:1.65;font-size:1.06rem}
+  h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif}
   a{color:var(--navy)}
-  .hero{background:linear-gradient(180deg,var(--sky-pale),var(--sky));text-align:center;padding:56px 20px 64px}
-  .trio{display:flex;justify-content:center;align-items:flex-start;gap:22px;flex-wrap:wrap}
-  .trio figure{margin:0}
-  .trio figcaption{margin-top:10px;font-size:.82rem;letter-spacing:.28em;text-transform:uppercase;color:#8a6d2f}
-  .hero img.art{width:min(340px,78vw);border-radius:18px;box-shadow:0 18px 50px rgba(13,39,74,.28)}
-  .hero img.shot{width:min(215px,40vw);border-radius:18px;box-shadow:0 14px 40px rgba(13,39,74,.25);margin-top:26px}
-  .hero h1{font-size:clamp(2.4rem,6vw,3.6rem);color:var(--navy);letter-spacing:.02em;margin-top:34px;font-weight:normal}
-  .hero .atelier{display:block;font-size:clamp(.85rem,2.4vw,1.05rem);letter-spacing:.55em;color:#8a6d2f;margin-top:6px;text-transform:uppercase}
-  .rule{width:120px;height:1px;background:var(--gold);margin:26px auto}
-  .hero p.lede{max-width:620px;margin:0 auto;font-size:1.15rem;color:var(--navy-deep)}
-  .soon{margin-top:26px;font-size:.95rem;letter-spacing:.18em;text-transform:uppercase;color:#8a6d2f}
+  .hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;justify-content:center;text-align:center;background:url('hero-full.jpg') center 22%/cover no-repeat var(--sky)}
+  .hero .veil{position:absolute;inset:auto 0 0 0;height:46%;background:linear-gradient(180deg,rgba(234,242,248,0),rgba(234,242,248,.88) 62%,rgba(234,242,248,.97))}
+  .hero .inner{position:relative;padding:0 20px 54px;max-width:760px}
+  .hero h1{font-size:clamp(3rem,9vw,4.6rem);color:var(--navy);letter-spacing:.02em;font-weight:600;line-height:1.02}
+  .hero .atelier{display:block;font-family:'Crimson Pro',Georgia,serif;font-size:clamp(.9rem,2.6vw,1.1rem);letter-spacing:.55em;color:#8a6d2f;margin-top:8px;text-transform:uppercase}
+  .rule{width:120px;height:1px;background:var(--gold);margin:24px auto}
+  .hero p.lede{max-width:620px;margin:0 auto;font-size:1.22rem;color:var(--navy-deep)}
+  .soon{margin-top:22px;font-size:.98rem;letter-spacing:.18em;text-transform:uppercase;color:#8a6d2f}
   section{max-width:860px;margin:0 auto;padding:56px 22px}
-  h2{color:var(--navy);font-weight:normal;font-size:1.7rem;text-align:center;margin-bottom:10px}
-  .sub{text-align:center;color:#5a6c84;max-width:640px;margin:0 auto 34px}
+  h2{color:var(--navy);font-weight:600;font-size:2rem;text-align:center;margin-bottom:10px}
+  .sub{text-align:center;color:#5a6c84;max-width:640px;margin:0 auto 34px;font-size:1.08rem}
+  .shots{display:flex;justify-content:center;gap:26px;flex-wrap:wrap}
+  .shots figure{margin:0;text-align:center}
+  .shots img{width:min(250px,42vw);border-radius:18px;box-shadow:0 14px 40px rgba(13,39,74,.25)}
+  .shots figcaption{margin-top:10px;font-size:.85rem;letter-spacing:.28em;text-transform:uppercase;color:#8a6d2f}
   .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px}
   .card{background:#fff;border:1px solid #e7dfca;border-top:3px solid var(--gold);padding:24px 22px;border-radius:6px}
-  .card h3{color:var(--navy);font-weight:normal;font-size:1.15rem;margin-bottom:8px}
-  .card p{font-size:.98rem;color:#44586f}
-  .night{background:var(--navy);color:#e9eef5}
+  .card h3{color:var(--navy);font-weight:600;font-size:1.35rem;margin-bottom:8px}
+  .card p{font-size:1rem;color:#44586f}
+  .night{background:var(--navy);color:#e9eef5;max-width:none}
+  .night .wrap{max-width:860px;margin:0 auto}
   .night h2{color:var(--gold-light)}
   .night .sub{color:#b9c8da}
   .night p.body{max-width:680px;margin:0 auto;text-align:center}
-  footer{background:var(--navy-deep);color:#aebdd0;text-align:center;padding:34px 20px;font-size:.92rem}
+  footer{background:var(--navy-deep);color:#aebdd0;text-align:center;padding:34px 20px;font-size:.95rem}
   footer a{color:var(--gold-light);text-decoration:none}
   footer .links{margin-bottom:12px}
   footer .links a{margin:0 12px}
@@ -44,24 +50,29 @@
 <body>
 
 <header class="hero">
-  <div class="trio">
+  <div class="veil"></div>
+  <div class="inner">
+    <h1>Rosary <span class="atelier">Atelier</span></h1>
+    <div class="rule"></div>
+    <p class="lede">A quiet, beautiful place to pray the Rosary. Each day opens with the Church's calendar and the day's Gospel, beneath sacred artwork chosen for the season.</p>
+    <p class="soon">Coming soon to the App Store and Google Play</p>
+  </div>
+</header>
+
+<section>
+  <h2>Two lights to pray in</h2>
+  <p class="sub">Night, in midnight navy and antique gold. Lourdes, in ivory and blue.</p>
+  <div class="shots">
     <figure>
-      <img class="shot" src="screen-night.jpg" alt="Rosary Atelier Today screen in the Night theme, with the Madonna and Child beneath a starry sky">
+      <img src="screen-night.jpg" alt="Rosary Atelier Today screen in the Night theme, with the Madonna and Child beneath a starry sky">
       <figcaption>Night</figcaption>
     </figure>
     <figure>
-      <img class="art" src="rosary-hero.jpg" alt="A silver decade rosary with a Sacred Heart centerpiece against a sky of soft blue clouds">
-    </figure>
-    <figure>
-      <img class="shot" src="screen-lourdes.jpg" alt="Rosary Atelier Today screen in the Lourdes theme, with Our Lady of Lourdes among soft clouds">
+      <img src="screen-lourdes.jpg" alt="Rosary Atelier Today screen in the Lourdes theme, with Our Lady of Lourdes among soft clouds">
       <figcaption>Lourdes</figcaption>
     </figure>
   </div>
-  <h1>Rosary <span class="atelier">Atelier</span></h1>
-  <div class="rule"></div>
-  <p class="lede">A quiet, beautiful place to pray the Rosary. Each day opens with the Church's calendar and the day's Gospel, beneath sacred artwork chosen for the season.</p>
-  <p class="soon">Coming soon to the App Store and Google Play</p>
-</header>
+</section>
 
 <section>
   <h2>Pray, bead by bead</h2>
@@ -87,9 +98,10 @@
 </section>
 
 <section class="night">
-  <h2>Two lights to pray in</h2>
-  <p class="sub">Night, in midnight navy and antique gold. Lourdes, in ivory and blue.</p>
-  <p class="body">Rosary Atelier was made slowly, and made with love, by a Catholic family, for anyone who wants a calmer way to keep a daily Rosary.</p>
+  <div class="wrap">
+    <h2>Made slowly, made with love</h2>
+    <p class="body">Rosary Atelier was made by a Catholic family, for anyone who wants a calmer way to keep a daily Rosary.</p>
+  </div>
 </section>
 
 <section>
