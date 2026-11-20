@@ -24,21 +24,14 @@
   .hero .veil{position:absolute;inset:auto 0 0 0;height:48%;background:linear-gradient(180deg,rgba(247,243,234,0),rgba(247,243,234,.9) 62%,rgba(247,243,234,.98))}
   .hero .inner{position:relative;padding:0 20px 54px;max-width:760px}
   .hero h1{font-size:30pt;font-weight:700;color:var(--text);line-height:1.05}
-  .hero .atelier{display:block;font-size:12pt;font-weight:600;letter-spacing:.55em;color:var(--muted);margin-top:8px;text-transform:uppercase}
   .rule{width:120px;height:1px;background:var(--star);margin:24px auto}
   .hero p.lede{font-family:'Cormorant Garamond',Georgia,serif;font-weight:700;font-style:italic;max-width:620px;margin:0 auto;font-size:17pt;color:var(--n-deep)}
   .soon{margin-top:22px;font-size:12pt;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
   section{max-width:860px;margin:0 auto;padding:56px 22px}
   h2{color:var(--text);font-weight:700;font-size:20pt;text-align:center;margin-bottom:10px}
   .sub{text-align:center;color:var(--muted);max-width:640px;margin:0 auto 34px;font-size:15pt}
-  .shots{display:flex;justify-content:center;gap:26px;flex-wrap:wrap}
-  .shots figure{margin:0;text-align:center}
-  .shots img{width:min(250px,42vw);border-radius:18px;box-shadow:0 14px 40px rgba(48,75,115,.28)}
-  .shots figcaption{margin-top:10px;font-size:12pt;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--muted)}
-  .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px}
-  .card{background:var(--panel);border:1px solid var(--border);border-top:3px solid var(--accent);padding:24px 22px;border-radius:6px}
-  .card h3{color:var(--text);font-weight:700;font-size:17pt;margin-bottom:8px}
-  .card p{font-size:15pt;color:var(--muted)}
+  .statement{text-align:center;padding:72px 22px}
+  .statement p{font-size:25pt;font-weight:600;color:var(--text)}
   .night{background:var(--n-bg);color:var(--n-text);max-width:none}
   .night .wrap{max-width:860px;margin:0 auto}
   .night h2{color:var(--n-star)}
@@ -55,49 +48,15 @@
 <header class="hero">
   <div class="veil"></div>
   <div class="inner">
-    <h1>Rosary <span class="atelier">Atelier</span></h1>
+    <h1>Rosary Atelier</h1>
     <div class="rule"></div>
-    <p class="lede">A quiet, beautiful place to pray the Rosary. Each day opens with the Church's calendar and the day's Gospel, beneath sacred artwork chosen for the season.</p>
+    <p class="lede">Pray the rosary, beautifully.</p>
     <p class="soon">Coming soon to the App Store and Google Play</p>
   </div>
 </header>
 
-<section>
-  <h2>Two lights to pray in</h2>
-  <p class="sub">Night, in deep navy and gold. Lourdes, in ivory and blue.</p>
-  <div class="shots">
-    <figure>
-      <img src="screen-night.jpg" alt="Rosary Atelier Today screen in the Night theme, with the Madonna and Child beneath a starry sky">
-      <figcaption>Night</figcaption>
-    </figure>
-    <figure>
-      <img src="screen-lourdes.jpg" alt="Rosary Atelier Today screen in the Lourdes theme, with Our Lady of Lourdes among soft clouds">
-      <figcaption>Lourdes</figcaption>
-    </figure>
-  </div>
-</section>
-
-<section>
-  <h2>Pray, bead by bead</h2>
-  <p class="sub">Begin where you left off, or start anew. Opening prayers and all four sets of Mysteries guide you through the Rosary, one bead at a time.</p>
-  <div class="features">
-    <div class="card">
-      <h3>Today</h3>
-      <p>The day's Gospel and the liturgical calendar, with sacred artwork chosen for the season you are praying in.</p>
-    </div>
-    <div class="card">
-      <h3>Guided Mysteries</h3>
-      <p>Joyful, Sorrowful, Glorious, and Luminous. A guided Rosary that remembers your place, so you can return and resume.</p>
-    </div>
-    <div class="card">
-      <h3>Create</h3>
-      <p>Build a rosary of your own, and keep the rosaries you love in your Rosary Box, ready for the next prayer.</p>
-    </div>
-    <div class="card">
-      <h3>Sacred artwork</h3>
-      <p>Every piece in the app carries its story with it. Tap any artwork to meet the artist and see its source on its own page.</p>
-    </div>
-  </div>
+<section class="statement">
+  <p>craft rosaries as beautiful as your prayer</p>
 </section>
 
 <section class="night">
