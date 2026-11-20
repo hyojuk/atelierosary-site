@@ -7,42 +7,45 @@
 <meta name="description" content="Rosary Atelier is a quiet, beautiful place to pray the Rosary: the day's Gospel, guided Mysteries, and sacred artwork, made by a Catholic family.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,700;1,700&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --navy:#0D274A; --navy-deep:#071B36; --gold:#CDAA63; --gold-light:#F3D48C;
-    --sky:#B9D2E4; --sky-pale:#EAF2F8; --ink:#22344D; --paper:#FBF9F4;
+    /* Day (default) */
+    --bg:#F7F3EA; --bg-deep:#FBF8F2; --panel:#FFFDF8; --text:#304B73; --muted:#607A9C;
+    --accent:#6F90BE; --border:#6A8DBB; --star:#D7BA7B; --glow:#BFD0E6; --on-accent:#FFFDF8;
+    /* Night */
+    --n-bg:#071B36; --n-deep:#0D274A; --n-panel:#102845; --n-text:#F5EBD7; --n-muted:#D8BC7A;
+    --n-accent:#D9B56A; --n-border:#CDAA63; --n-star:#F3D48C;
   }
   *{margin:0;padding:0;box-sizing:border-box}
-  body{font-family:'Crimson Pro',Georgia,'Times New Roman',serif;color:var(--ink);background:var(--paper);line-height:1.65;font-size:1.06rem}
-  h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif}
-  a{color:var(--navy)}
-  .hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;justify-content:center;text-align:center;background:url('hero-full.jpg') center 22%/cover no-repeat var(--sky)}
-  .hero .veil{position:absolute;inset:auto 0 0 0;height:46%;background:linear-gradient(180deg,rgba(234,242,248,0),rgba(234,242,248,.88) 62%,rgba(234,242,248,.97))}
+  body{font-family:'Crimson Pro',Georgia,'Times New Roman',serif;color:var(--text);background:var(--bg);line-height:1.6;font-size:15pt}
+  a{color:var(--accent)}
+  .hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;justify-content:center;text-align:center;background:url('hero-full.jpg') center 22%/cover no-repeat var(--glow)}
+  .hero .veil{position:absolute;inset:auto 0 0 0;height:48%;background:linear-gradient(180deg,rgba(247,243,234,0),rgba(247,243,234,.9) 62%,rgba(247,243,234,.98))}
   .hero .inner{position:relative;padding:0 20px 54px;max-width:760px}
-  .hero h1{font-size:clamp(3rem,9vw,4.6rem);color:var(--navy);letter-spacing:.02em;font-weight:600;line-height:1.02}
-  .hero .atelier{display:block;font-family:'Crimson Pro',Georgia,serif;font-size:clamp(.9rem,2.6vw,1.1rem);letter-spacing:.55em;color:#8a6d2f;margin-top:8px;text-transform:uppercase}
-  .rule{width:120px;height:1px;background:var(--gold);margin:24px auto}
-  .hero p.lede{max-width:620px;margin:0 auto;font-size:1.22rem;color:var(--navy-deep)}
-  .soon{margin-top:22px;font-size:.98rem;letter-spacing:.18em;text-transform:uppercase;color:#8a6d2f}
+  .hero h1{font-size:30pt;font-weight:700;color:var(--text);line-height:1.05}
+  .hero .atelier{display:block;font-size:12pt;font-weight:600;letter-spacing:.55em;color:var(--muted);margin-top:8px;text-transform:uppercase}
+  .rule{width:120px;height:1px;background:var(--star);margin:24px auto}
+  .hero p.lede{font-family:'Cormorant Garamond',Georgia,serif;font-weight:700;font-style:italic;max-width:620px;margin:0 auto;font-size:17pt;color:var(--n-deep)}
+  .soon{margin-top:22px;font-size:12pt;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
   section{max-width:860px;margin:0 auto;padding:56px 22px}
-  h2{color:var(--navy);font-weight:600;font-size:2rem;text-align:center;margin-bottom:10px}
-  .sub{text-align:center;color:#5a6c84;max-width:640px;margin:0 auto 34px;font-size:1.08rem}
+  h2{color:var(--text);font-weight:700;font-size:20pt;text-align:center;margin-bottom:10px}
+  .sub{text-align:center;color:var(--muted);max-width:640px;margin:0 auto 34px;font-size:15pt}
   .shots{display:flex;justify-content:center;gap:26px;flex-wrap:wrap}
   .shots figure{margin:0;text-align:center}
-  .shots img{width:min(250px,42vw);border-radius:18px;box-shadow:0 14px 40px rgba(13,39,74,.25)}
-  .shots figcaption{margin-top:10px;font-size:.85rem;letter-spacing:.28em;text-transform:uppercase;color:#8a6d2f}
+  .shots img{width:min(250px,42vw);border-radius:18px;box-shadow:0 14px 40px rgba(48,75,115,.28)}
+  .shots figcaption{margin-top:10px;font-size:12pt;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--muted)}
   .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px}
-  .card{background:#fff;border:1px solid #e7dfca;border-top:3px solid var(--gold);padding:24px 22px;border-radius:6px}
-  .card h3{color:var(--navy);font-weight:600;font-size:1.35rem;margin-bottom:8px}
-  .card p{font-size:1rem;color:#44586f}
-  .night{background:var(--navy);color:#e9eef5;max-width:none}
+  .card{background:var(--panel);border:1px solid var(--border);border-top:3px solid var(--accent);padding:24px 22px;border-radius:6px}
+  .card h3{color:var(--text);font-weight:700;font-size:17pt;margin-bottom:8px}
+  .card p{font-size:15pt;color:var(--muted)}
+  .night{background:var(--n-bg);color:var(--n-text);max-width:none}
   .night .wrap{max-width:860px;margin:0 auto}
-  .night h2{color:var(--gold-light)}
-  .night .sub{color:#b9c8da}
-  .night p.body{max-width:680px;margin:0 auto;text-align:center}
-  footer{background:var(--navy-deep);color:#aebdd0;text-align:center;padding:34px 20px;font-size:.95rem}
-  footer a{color:var(--gold-light);text-decoration:none}
+  .night h2{color:var(--n-star)}
+  .night p.body{max-width:680px;margin:0 auto;text-align:center;color:var(--n-text)}
+  .night .body em{font-family:'Cormorant Garamond',Georgia,serif;font-weight:700}
+  footer{background:var(--n-deep);color:var(--n-muted);text-align:center;padding:34px 20px;font-size:12pt}
+  footer a{color:var(--n-star);text-decoration:none}
   footer .links{margin-bottom:12px}
   footer .links a{margin:0 12px}
 </style>
@@ -61,7 +64,7 @@
 
 <section>
   <h2>Two lights to pray in</h2>
-  <p class="sub">Night, in midnight navy and antique gold. Lourdes, in ivory and blue.</p>
+  <p class="sub">Night, in deep navy and gold. Lourdes, in ivory and blue.</p>
   <div class="shots">
     <figure>
       <img src="screen-night.jpg" alt="Rosary Atelier Today screen in the Night theme, with the Madonna and Child beneath a starry sky">
@@ -100,7 +103,7 @@
 <section class="night">
   <div class="wrap">
     <h2>Made slowly, made with love</h2>
-    <p class="body">Rosary Atelier was made by a Catholic family, for anyone who wants a calmer way to keep a daily Rosary.</p>
+    <p class="body">Rosary Atelier was made by a Catholic family, for anyone who wants a <em>calmer way</em> to keep a daily Rosary.</p>
   </div>
 </section>
 
