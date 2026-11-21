@@ -20,9 +20,9 @@
   *{margin:0;padding:0;box-sizing:border-box}
   body{font-family:'Crimson Pro',Georgia,'Times New Roman',serif;color:var(--text);background:var(--bg);line-height:1.6;font-size:15pt}
   a{color:var(--accent)}
-  .hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;justify-content:center;text-align:center;background:url('hero-full.jpg') center 22%/cover no-repeat var(--glow)}
-  .hero .veil{position:absolute;inset:auto 0 0 0;height:48%;background:linear-gradient(180deg,rgba(247,243,234,0),rgba(247,243,234,.9) 62%,rgba(247,243,234,.98))}
-  .hero .inner{position:relative;padding:0 20px 54px;max-width:760px}
+  .hero{position:relative;min-height:100svh;display:flex;align-items:flex-start;justify-content:center;text-align:center;background:url('hero-full.jpg') center 22%/cover no-repeat var(--glow)}
+  .hero .veil{position:absolute;inset:0 0 auto 0;height:46%;background:linear-gradient(180deg,rgba(247,243,234,.98),rgba(247,243,234,.88) 55%,rgba(247,243,234,0))}
+  .hero .inner{position:relative;padding:8vh 20px 0;max-width:760px}
   .hero h1{font-size:30pt;font-weight:700;color:var(--text);line-height:1.05}
   .rule{width:120px;height:1px;background:var(--star);margin:24px auto}
   .hero p.lede{font-family:'Cormorant Garamond',Georgia,serif;font-weight:700;font-style:italic;max-width:620px;margin:0 auto;font-size:17pt;color:var(--n-deep)}
@@ -34,7 +34,7 @@
   .statement p{font-size:25pt;font-weight:600;color:var(--text)}
   .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;max-width:1080px;padding-top:26px}
   @media (min-width:900px){.gallery{grid-template-columns:repeat(4,1fr)}}
-  .gallery img{width:100%;filter:drop-shadow(0 14px 34px rgba(48,75,115,.30))}
+  .gallery img{display:block;width:100%;height:100%;object-fit:cover;aspect-ratio:520/1097;filter:drop-shadow(0 14px 34px rgba(48,75,115,.30))}
   .night{background:var(--n-bg);color:var(--n-text);max-width:none}
   .night .wrap{max-width:860px;margin:0 auto}
   .night h2{color:var(--n-star)}
@@ -89,7 +89,7 @@
   <div class="about">
     <h2>About us</h2>
     <p>We are Claire and Charlie, a Catholic family in Washington. Before there was an app, there were rosaries made at our own table, by hand, for our own prayer and for the people we love.</p>
-    <p>Making them taught us what a rosary is: not an object, but a companion, crafted slowly and held daily. We built Rosary Atelier to carry that same care into an app, a quiet place to pray the daily Rosary, with the day's Gospel, the Mysteries, and sacred artwork, made as personally as the rosaries we make by hand.</p>
+    <p>We built Rosary Atelier to carry that same care into an app, a quiet place to pray the daily Rosary, with the day's Gospel, the Mysteries, and sacred artwork, made as personally as the rosaries we make by hand.</p>
   </div>
   <div class="links">
     <a href="index.html">Home</a>
