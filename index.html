@@ -22,7 +22,7 @@
   a{color:var(--accent)}
   .hero{position:relative;min-height:100svh;text-align:center;background:var(--bg)}
   .hero .art{position:absolute;left:0;right:0;top:30vh;bottom:0;background:url('hero-full.jpg') center 18%/cover no-repeat var(--glow)}
-  .hero .art::before{content:'';position:absolute;left:0;right:0;top:0;height:14vh;background:linear-gradient(180deg,rgba(247,243,234,.7),rgba(247,243,234,0))}
+  .hero .fade-top{position:absolute;left:0;right:0;top:20vh;height:18vh;background:linear-gradient(180deg,#F7F3EA 25%,rgba(247,243,234,0));pointer-events:none}
   .hero .art::after{content:'';position:absolute;left:0;right:0;bottom:0;height:24vh;background:linear-gradient(180deg,rgba(247,243,234,0),#F7F3EA)}
   .hero .inner{position:relative;padding:6vh 20px 0;max-width:760px;margin:0 auto}
   @media (min-width:900px){.hero .art{background-image:url('hero-wide.jpg');background-position:center}}
@@ -57,6 +57,7 @@
 
 <header class="hero">
   <div class="art"></div>
+  <div class="fade-top"></div>
   <div class="inner">
     <h1>Rosary Atelier</h1>
     <div class="rule"></div>
