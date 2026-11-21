@@ -20,11 +20,12 @@
   *{margin:0;padding:0;box-sizing:border-box}
   body{font-family:'Crimson Pro',Georgia,'Times New Roman',serif;color:var(--text);background:var(--bg);line-height:1.6;font-size:15pt}
   a{color:var(--accent)}
-  .hero{position:relative;min-height:100svh;display:flex;align-items:flex-start;justify-content:center;text-align:center;background:url('hero-full.jpg') center 22%/cover no-repeat var(--glow)}
-  .hero .veil{position:absolute;inset:0 0 auto 0;height:46%;background:linear-gradient(180deg,rgba(247,243,234,.98),rgba(247,243,234,.88) 55%,rgba(247,243,234,0))}
-  .hero .inner{position:relative;padding:8vh 20px 0;max-width:760px}
-  .hero::after{content:'';position:absolute;left:0;right:0;bottom:0;height:24vh;background:linear-gradient(180deg,rgba(247,243,234,0),#F7F3EA);pointer-events:none}
-  @media (min-width:900px){.hero{background-image:url('hero-wide.jpg');background-position:center}}
+  .hero{position:relative;min-height:100svh;text-align:center;background:var(--bg)}
+  .hero .art{position:absolute;left:0;right:0;top:30vh;bottom:0;background:url('hero-full.jpg') center 18%/cover no-repeat var(--glow)}
+  .hero .art::before{content:'';position:absolute;left:0;right:0;top:0;height:15vh;background:linear-gradient(180deg,#F7F3EA,rgba(247,243,234,0))}
+  .hero .art::after{content:'';position:absolute;left:0;right:0;bottom:0;height:24vh;background:linear-gradient(180deg,rgba(247,243,234,0),#F7F3EA)}
+  .hero .inner{position:relative;padding:6vh 20px 0;max-width:760px;margin:0 auto}
+  @media (min-width:900px){.hero .art{background-image:url('hero-wide.jpg');background-position:center}}
   .hero h1{font-size:30pt;font-weight:700;color:var(--text);line-height:1.05}
   .rule{width:120px;height:1px;background:var(--star);margin:24px auto}
   .hero p.lede{font-family:'Cormorant Garamond',Georgia,serif;font-weight:700;font-style:italic;max-width:620px;margin:0 auto;font-size:17pt;color:var(--n-deep)}
@@ -55,7 +56,7 @@
 <body>
 
 <header class="hero">
-  <div class="veil"></div>
+  <div class="art"></div>
   <div class="inner">
     <h1>Rosary Atelier</h1>
     <div class="rule"></div>
